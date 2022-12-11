@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Marroh Compliment Generator</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen justify-center items-center">
+      <h2
+        id="compliment"
+        class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600 fade-in"
+      >
+        AHH
+      </h2>
+      <button
+        type="button"
+        id="randomize"
+        class="inline-block w-15 px-6 py-2.5 my-3 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
+      >
+        Compliment
+      </button>
+    </div>
+
+    <script>
+      let compliments = [
+        'You have such a unique and interesting perspective on things.',
+        'Your creativity never ceases to amaze me.',
+        'You are so good at making others feel comfortable and welcomed.',
+        'Your ability to find humor in any situation is a special talent.',
+        'You have a beautiful soul and a kind heart.',
+        'You are so resilient and strong, and I admire your determination.',
+        'You have a great sense of style and always know how to make a statement.',
+        'Your intelligence and quick wit never fail to impress me.',
+        'You have a special gift for bringing people together and fostering connections.',
+        'You are a true friend and always there for me when I need you.'
+      ];
+
+      let startingCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+      document.getElementById('compliment').innerHTML = startingCompliment;
+
+      let button = document.getElementById('randomize');
+      button.addEventListener('click', function() {;
+        let randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+        let text = document.getElementById('compliment');
+        text.classList.add('hide');
+        setTimeout(function() {
+          text.classList.add('show');
+          setTimeout(function() {
+            text.classList.remove('show');
+            text.classList.remove('hide');
+            text.innerHTML = randomCompliment;
+          }, 1500);
+        });
+      });
+    </script>
+  </body>
+</html>
