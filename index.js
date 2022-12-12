@@ -16,7 +16,6 @@ let compliments = [
 let unused = [...compliments];
 
 random = function() {
-  console.log(unused);
   if (unused.length === 0) {
     unused = [...compliments];
   }
