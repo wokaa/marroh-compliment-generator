@@ -24,38 +24,6 @@
         Compliment
       </button>
     </div>
-
-    <script>
-      let compliments = [
-        'You have such a unique and interesting perspective on things.',
-        'Your creativity never ceases to amaze me.',
-        'You are so good at making others feel comfortable and welcomed.',
-        'Your ability to find humor in any situation is a special talent.',
-        'You have a beautiful soul and a kind heart.',
-        'You are so resilient and strong, and I admire your determination.',
-        'You have a great sense of style and always know how to make a statement.',
-        'Your intelligence and quick wit never fail to impress me.',
-        'You have a special gift for bringing people together and fostering connections.',
-        'You are a true friend and always there for me when I need you.'
-      ];
-
-      let startingCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-      document.getElementById('compliment').innerHTML = startingCompliment;
-
-      let button = document.getElementById('randomize');
-      button.addEventListener('click', function() {;
-        let randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-        let text = document.getElementById('compliment');
-        text.classList.add('hide');
-        setTimeout(function() {
-          text.classList.add('show');
-          setTimeout(function() {
-            text.classList.remove('show');
-            text.classList.remove('hide');
-            text.innerHTML = randomCompliment;
-          }, 1500);
-        });
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
