@@ -8,7 +8,9 @@ let compliments = [
   'You have a great sense of style and always know how to make a statement.',
   'Your intelligence and quick wit never fail to impress me.',
   'You have a special gift for bringing people together and fostering connections.',
-  'You are a true friend and always there for me when I need you.'
+  'You are a true friend and always there for me when I need you.',
+  'Your presence is like a gust of wind, always unexpected and surprising.',
+  'Your mind is like a puzzle, always putting things together in unexpected ways.'
 ];
 
 let unused = [...compliments];
